@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>신수민 교수 Soomin Shin</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="신수민 (Soomin Shin) — 국립한국교통대학교 사회복지학과 조교수. 정신건강사회복지, 노인 자살예방, 사회적경제와 CSR 연구.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: sticky section nav → two-column hero (name / contact card) → single 960px reading column of sections, each with a bilingual eyebrow */
+:root{
+  --bg:#f5f7f4; --surface:#ffffff; --ink:#1d2928; --muted:#5b6b69; --line:#dbe3df;
+  --pine:#1f5a55; --pine-soft:#e3eeeb; --amber:#b9781c; --amber-soft:#f6ecdc;
+  --f-display:"Gowun Batang","Noto Serif KR","Apple SD Gothic Neo",serif;
+  --f-body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121918; --surface:#19221f; --ink:#e4ebe8; --muted:#9aaba7; --line:#2b3835;
+  --pine:#7cc2b9; --pine-soft:#1d3330; --amber:#e0a957; --amber-soft:#33281a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121918; --surface:#19221f; --ink:#e4ebe8; --muted:#9aaba7; --line:#2b3835;
+  --pine:#7cc2b9; --pine-soft:#1d3330; --amber:#e0a957; --amber-soft:#33281a; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--pine);text-decoration-thickness:1px;text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--amber);outline-offset:2px;border-radius:4px}
+.wrap{max-width:1000px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+/* nav */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:20px;height:56px}
+.brand{font-family:var(--f-display);font-weight:700;font-size:17px;color:var(--ink);text-decoration:none;white-space:nowrap}
+.nav ul{list-style:none;margin:0 0 0 auto;padding:0;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;min-width:0}
+.nav ul::-webkit-scrollbar{display:none}
+.nav a.link{display:block;padding:6px 10px;font-size:13px;color:var(--muted);text-decoration:none;white-space:nowrap;border-radius:6px}
+.nav a.link:hover{color:var(--ink);background:var(--pine-soft)}
+
+/* hero */
+.hero{padding-block:64px 48px}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:48px;align-items:start}
+.kicker{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--amber);margin:0 0 14px}
+h1{font-family:var(--f-display);font-weight:700;font-size:clamp(40px,6vw,60px);line-height:1.1;margin:0;letter-spacing:-.01em}
+h1 .en{display:block;font-size:.42em;font-weight:400;color:var(--muted);letter-spacing:.02em;margin-top:10px}
+.role{margin:22px 0 0;font-size:16px}
+.role b{font-weight:600}
+.role span{display:block;color:var(--muted);font-size:14px}
+.themes{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 0;padding:0;list-style:none}
+.themes li{font-size:13px;padding:5px 12px;border-radius:999px;background:var(--pine-soft);color:var(--pine);font-weight:500}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:9px 16px;border-radius:8px;font-size:14px;font-weight:500;text-decoration:none;border:1px solid var(--line);color:var(--ink);background:var(--surface)}
+.btn:hover{border-color:var(--pine);color:var(--pine)}
+.btn.primary{background:var(--pine);border-color:var(--pine);color:var(--bg)}
+.btn.primary:hover{color:var(--bg);opacity:.9}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
+.portrait{width:100%;aspect-ratio:4/5;max-width:100%;border-radius:10px;overflow:hidden;background:var(--pine-soft);display:grid;place-items:center;position:relative}
+.portrait img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.monogram{font-family:var(--f-display);font-size:64px;color:var(--pine)}
+.contact-mini{margin-top:18px;display:grid;gap:10px;font-size:13.5px}
+.contact-mini div{display:grid;grid-template-columns:64px 1fr;gap:8px}
+.contact-mini dt{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:2px}
+.contact-mini dd{margin:0;min-width:0;overflow-wrap:anywhere}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat{padding:22px 16px;border-left:1px solid var(--line)}
+.stat:first-child{border-left:0}
+.stat b{display:block;font-family:var(--f-display);font-size:34px;line-height:1;color:var(--pine);font-variant-numeric:tabular-nums}
+.stat span{display:block;font-size:12.5px;color:var(--muted);margin-top:8px}
+
+/* sections */
+section.block{padding-block:64px 8px}
+.eyebrow{display:flex;align-items:baseline;gap:12px;margin:0 0 6px;font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--amber)}
+h2{font-family:var(--f-display);font-weight:700;font-size:30px;line-height:1.25;margin:0 0 28px;text-wrap:balance}
+h3{font-size:15px;font-weight:600;margin:0}
+.prose{max-width:68ch}
+.prose p{margin:0 0 14px}
+
+.interest-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.interest h3{font-family:var(--f-display);font-size:19px;font-weight:700}
+.interest .en{font-family:var(--f-mono);font-size:11.5px;color:var(--muted);letter-spacing:.04em;margin:2px 0 12px}
+.interest ul{margin:0;padding-left:18px;font-size:14.5px}
+.interest .key{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);font-size:13px;color:var(--muted)}
+.interest .key b{color:var(--ink);font-weight:500}
+
+/* tabs */
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 20px}
+.tabs button{font:inherit;font-size:13px;padding:6px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--muted);cursor:pointer}
+.tabs button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+
+.pubgroup h3{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500;margin:28px 0 8px}
+.pubgroup:first-of-type h3{margin-top:0}
+ol.list{list-style:none;margin:0;padding:0}
+ol.list li{display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;padding:14px 0;border-top:1px solid var(--line)}
+ol.list li:last-child{border-bottom:1px solid var(--line)}
+.yr{font-family:var(--f-mono);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:2px}
+.ttl{font-weight:500}
+.meta{font-size:13.5px;color:var(--muted)}
+.meta i{font-style:italic}
+.me{font-weight:600;color:var(--ink)}
+.badge{display:inline-block;font-family:var(--f-mono);font-size:11px;padding:1px 8px;border-radius:4px;margin-right:6px;vertical-align:1px}
+.b-ssci{background:var(--pine-soft);color:var(--pine)}
+.b-award{background:var(--amber-soft);color:var(--amber)}
+
+.timeline li{grid-template-columns:150px minmax(0,1fr)}
+.two-col{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+.plain{margin:0;padding-left:18px;font-size:14.5px}
+.plain li{margin-bottom:4px}
+.sub{font-size:13.5px;color:var(--muted);margin-top:2px}
+
+.contact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.contact-grid .card{padding:20px}
+.contact-grid dt{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.contact-grid dd{margin:0;font-size:14.5px;overflow-wrap:anywhere}
+
+footer{margin-top:72px;padding-block:28px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+
+@media (max-width:760px){
+  .hero{padding-block:40px 32px}
+  .hero .wrap{grid-template-columns:1fr;gap:28px}
+  .hero .card{max-width:360px}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stat:nth-child(3){border-left:0}
+  .stat:nth-child(n+3){border-top:1px solid var(--line)}
+  .interest-grid,.two-col,.contact-grid{grid-template-columns:1fr}
+  ol.list li,.timeline li{grid-template-columns:1fr;gap:4px}
+  .brand{display:none}
+  .nav ul{margin-left:0}
+  h2{font-size:25px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Sections">
+  <div class="wrap">
+    <a class="brand" href="#top">신수민 · Soomin Shin</a>
+    <ul>
+      <li><a class="link" href="#about">소개</a></li>
+      <li><a class="link" href="#research">연구 관심</a></li>
+      <li><a class="link" href="#publications">Publications</a></li>
+      <li><a class="link" href="#presentations">Presentations</a></li>
+      <li><a class="link" href="#projects">Projects</a></li>
+      <li><a class="link" href="#experience">경력</a></li>
+      <li><a class="link" href="#education">학력</a></li>
+      <li><a class="link" href="#activities">대외활동</a></li>
+      <li><a class="link" href="#news">News</a></li>
+      <li><a class="link" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="kicker">Department of Social Welfare · Korea National University of Transportation</p>
+      <h1>신수민<span class="en">Soomin Shin, Ph.D.</span></h1>
+      <p class="role"><b>국립한국교통대학교 사회복지학과 조교수</b>
+        <span>Assistant Professor, Department of Social Welfare, Korea National University of Transportation (2024.09 – )</span></p>
+      <ul class="themes" aria-label="Research themes">
+        <li>Mental Health 정신건강</li>
+        <li>Suicide Prevention 자살예방</li>
+        <li>Aging &amp; Older Adults 노인복지</li>
+        <li>Social Service 사회서비스</li>
+        <li>Social Economy &amp; CSR 사회적경제</li>
+      </ul>
+      <div class="links">
+        <a class="btn primary" href="https://scholar.google.com/citations?hl=ko&amp;user=kCt1l34AAAAJ" target="_blank" rel="noopener">Google Scholar ↗</a>
+        <a class="btn" href="https://drive.google.com/file/d/1ZAUAHD-VSIVQg_SfeJf8YUn2jpaSYJ29/view?usp=share_link" target="_blank" rel="noopener">CV ↗</a>
+        <a class="btn" href="https://www.linkedin.com/in/soominshin" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+    <aside class="card" aria-label="Profile">
+      <div class="portrait">
+        <span class="monogram" aria-hidden="true">신</span>
+        <img src="images/profile.jpg" alt="신수민 교수 사진" onerror="this.remove()">
+      </div>
+      <dl class="contact-mini">
+        <div><dt>Email</dt><dd>sshin@ut.ac.kr</dd></div>
+        <div><dt>Office</dt><dd>화학생명관 219호<br>국립한국교통대학교 충주캠퍼스</dd></div>
+        <div><dt>Tel</dt><dd>043-849-1762</dd></div>
+      </dl>
+    </aside>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="stats" aria-label="Summary">
+    <div class="stat"><b>4</b><span>SSCI · SCIE 논문</span></div>
+    <div class="stat"><b>16</b><span>KCI 논문</span></div>
+    <div class="stat"><b>7</b><span>연구과제 Research Grants</span></div>
+    <div class="stat"><b>20</b><span>학술발표 (국내 11 · 국제 9)</span></div>
+  </div>
+</div>
+
+<main>
+<section class="block" id="about"><div class="wrap">
+  <p class="eyebrow">About</p>
+  <h2>소개</h2>
+  <div class="prose">
+    <p>국립한국교통대학교 사회복지학과 조교수로 재직하고 있습니다. 노인의 자살생각과 자살예방을 중심으로 한 정신건강사회복지를 주된 연구 영역으로 삼고 있으며, 박사학위 논문에서는 공식적·비공식적 자원과 노인 자살생각의 관계를 다층모형으로 분석하였습니다.</p>
+    <p>최근에는 머신러닝, 설명가능한 인공지능(XAI), 뉴스·댓글 빅데이터 텍스트마이닝을 활용하여 노인과 아동·청소년의 자살생각 예측, 치매와 노인에 대한 사회적 인식, 기부자 행동을 연구하고 있습니다. 삼성경제연구소에서의 CSR 컨설팅 경험을 바탕으로 사회적경제와 기업의 사회적 책임(CSR·ESG) 분야의 연구와 자문도 이어가고 있습니다.</p>
+    <p>담당 교과목은 사회복지행정론, 사회복지조사론, 사회서비스, 지역사회복지론입니다.</p>
+  </div>
+</div></section>
+
+<section class="block" id="research"><div class="wrap">
+  <p class="eyebrow">Research Interests</p>
+  <h2>연구 관심 분야</h2>
+  <div class="interest-grid">
+    <article class="card interest">
+      <h3>정신건강사회복지와 자살예방</h3>
+      <p class="en">Mental Health Social Work &amp; Suicide Prevention</p>
+      <ul><li>자살생각, 자살예방</li><li>중독, 우울, 삶의 질</li></ul>
+      <p class="key"><b>대표 논문</b> · Shin &amp; Kim (2023), <i>Asian Journal of Psychiatry</i> · 홍송이·신수민 (2025), 비판사회정책</p>
+    </article>
+    <article class="card interest">
+      <h3>노인복지와 아동·가족복지</h3>
+      <p class="en">Gerontological Social Welfare · Child &amp; Family Welfare</p>
+      <ul><li>노인 우울, 노후준비, 주거빈곤</li><li>노인요양시설 내 방임, 에이지즘</li><li>아동·청소년 정신건강</li></ul>
+      <p class="key"><b>대표 논문</b> · 신수민 (2023), 노인복지연구 · 홍송이·윤정·신수민 (2025), 노인복지연구</p>
+    </article>
+    <article class="card interest">
+      <h3>의료사회복지</h3>
+      <p class="en">Medical Social Work</p>
+      <ul><li>암환자의 삶의 질과 정신건강</li><li>치매, 소아암, 백혈병 환자의 삶의 질</li><li>회복탄력성</li></ul>
+      <p class="key"><b>관련 과제</b> · 치매에 대한 사회적 인식 및 태도 예측 모형 개발 (한국연구재단, 2023–2026)</p>
+    </article>
+    <article class="card interest">
+      <h3>사회적경제, CSR과 비영리</h3>
+      <p class="en">Social Economy · CSR · Philanthropy &amp; NPO</p>
+      <ul><li>소셜벤처, 사회적기업, 협동조합</li><li>기업시민, CSR, 임직원 자원봉사, 산업복지</li><li>ESG, SDGs, 지속가능성, 정의로운 전환</li><li>자원봉사, 기부, 비영리조직</li></ul>
+      <p class="key"><b>대표 논문</b> · 유한나·권소일·신수민 (2022), 사회적가치와 기업연구</p>
+    </article>
+  </div>
+</div></section>
+
+<section class="block" id="publications"><div class="wrap">
+  <p class="eyebrow">Publications · 논문</p>
+  <h2>Selected Publications</h2>
+  <div class="tabs" role="group" aria-label="Filter publications">
+    <button type="button" id="f-all" data-f="all" aria-pressed="true">All 전체</button>
+    <button type="button" id="f-ssci" data-f="ssci" aria-pressed="false">SSCI · SCIE</button>
+    <button type="button" id="f-kci" data-f="kci" aria-pressed="false">KCI</button>
+  </div>
+
+  <div class="pubgroup" data-g="ssci">
+    <h3>International Journals · SSCI / SCIE</h3>
+    <ol class="list">
+      <li><span class="yr">2025</span><div><div class="ttl">Assessing the Impact of Job Demand, Surface Acting, and Workplace Social Support on Social Workers' Job Satisfaction</div><div class="meta">Yoewon Yoon, <span class="me">Soomin Shin</span>, Seonwoo Lee · <i>Human Service Organizations: Management, Leadership &amp; Governance</i>, 49(2), 208–223</div><div class="meta"><span class="badge b-ssci">SSCI</span>JCR 2024 Q2</div></div></li>
+      <li><span class="yr">2024</span><div><div class="ttl">Explainable prediction of problematic smartphone use among South Korea's children and adolescents using a machine learning approach</div><div class="meta">Kyungwon Kim, Yoewon Yoon, <span class="me">Soomin Shin</span> · <i>International Journal of Medical Informatics</i>, 186, 105441</div><div class="meta"><span class="badge b-ssci">SCIE</span>IF 4.900 · JCR 2022 Q1</div></div></li>
+      <li><span class="yr">2023</span><div><div class="ttl">A Case Study on Community Treatment Center for Response to COVID-19 in Korea: Focusing on Surge Capacity 4S Component Analysis and Social Well-being Perspective</div><div class="meta">Wonsuk Chung, <span class="me">Soomin Shin</span>, Euna Choi, Jinsoo Kim · <i>Social Work in Public Health</i>, 38(5–8), 387–399</div><div class="meta"><span class="badge b-ssci">SSCI</span>JCR 2022 Q1</div></div></li>
+      <li><span class="yr">2023</span><div><div class="ttl">Prediction of suicidal ideation in children and adolescents using machine learning and deep learning algorithm: a case study in South Korea where suicide is the leading cause of death</div><div class="meta"><span class="me">Soomin Shin</span>, Kyungwon Kim · <i>Asian Journal of Psychiatry</i>, 88, 103725</div><div class="meta"><span class="badge b-ssci">SCIE</span>IF 13.890 · JCR 2021 Top 4.19%</div></div></li>
+    </ol>
+  </div>
+
+  <div class="pubgroup" data-g="kci">
+    <h3>국내 학술지 · KCI</h3>
+    <ol class="list">
+      <li><span class="yr">2025</span><div><div class="ttl">노인요양시설 내 방임의 체계적 문헌고찰: 방임의 시의적 개념화</div><div class="meta">홍송이, 윤정, <span class="me">신수민</span> · <i>노인복지연구</i>, 80(4), 67–100</div></div></li>
+      <li><span class="yr">2025</span><div><div class="ttl">설명가능한 인공지능 알고리즘을 이용한 노인의 자살 생각 예측</div><div class="meta">홍송이, <span class="me">신수민</span> · <i>비판사회정책</i>, 86, 143–174</div></div></li>
+      <li><span class="yr">2023</span><div><div class="ttl">도시공원의 사회적 가치와 지역사회 아동복지 연계 효과: 어린이집을 중심으로</div><div class="meta"><span class="me">신수민</span>, 김경원 · <i>한국융합과학회지</i>, 12(12), 449–466</div></div></li>
+      <li><span class="yr">2023</span><div><div class="ttl">뉴스 빅데이터를 활용한 저출산 및 출산율의 키워드 트렌드 분석</div><div class="meta"><span class="me">신수민</span>, 윤여원 · <i>한국가족복지학</i>, 28(4), 587–607</div></div></li>
+      <li><span class="yr">2023</span><div><div class="ttl">다층모형을 활용한 노인의 사회적 자원과 자살 생각의 영향요인에 대한 연구</div><div class="meta"><span class="me">신수민</span> · <i>노인복지연구</i>, 78(4), 9–38</div></div></li>
+      <li><span class="yr">2023</span><div><div class="ttl">고등학생이 지각한 부모의 부정적 양육태도가 우울에 미치는 영향: 수면의 질 매개효과</div><div class="meta">박예휘, <span class="me">신수민</span> · <i>한국융합과학회지</i>, 12(11), 207–224</div></div></li>
+      <li><span class="yr">2022</span><div><div class="ttl">사회적경제 조직의 공공구매시장 역량 강화 사례 연구: 서울시를 중심으로</div><div class="meta">유한나, 권소일, <span class="me">신수민</span> · <i>사회적가치와 기업연구</i>, 15(2), 37–64</div></div></li>
+      <li><span class="yr">2018</span><div><div class="ttl">성폭력피해자 지원센터 종사자의 이차적 외상 스트레스가 직무 스트레스에 미치는 영향: 직무교육의 조절효과</div><div class="meta"><span class="me">신수민</span> · <i>사회복지연구</i>, 49(1), 109–132</div></div></li>
+      <li><span class="yr">2017</span><div><div class="ttl">노년기 주거비부담이 우울 궤적에 미치는 영향: 노후생활비 준비여부에 따른 차이 비교</div><div class="meta"><span class="me">신수민</span>, 정규형 · <i>노인복지연구</i>, 72(4), 191–215</div></div></li>
+      <li><span class="yr">2016</span><div><div class="ttl">성폭력피해자 지원기관 전문인력 양성 교육 콘텐츠 개발을 위한 기초 연구</div><div class="meta">송인한, 김지은, <span class="me">신수민</span>, 이상혁 · <i>한국콘텐츠학회논문지</i>, 16(9), 379–361</div></div></li>
+      <li><span class="yr">2016</span><div><div class="ttl">청소년의 휴대전화 의존도가 학업성취에 미치는 영향에 대한 종단연구</div><div class="meta"><span class="me">신수민</span>, 김민정 · <i>미래청소년학회지</i>, 14(3), 159–175</div></div></li>
+      <li><span class="yr">2016</span><div><div class="ttl">고등학생이 지각한 부모의 학대가 학교생활적응에 미치는 영향: 일반긴장이론에 근거한 성인용 매채 이용 빈도 및 몰입도의 매개효과</div><div class="meta"><span class="me">신수민</span>, 정규형 · <i>한국가족복지학</i>, 52, 7–34</div></div></li>
+      <li><span class="yr">2013</span><div><div class="ttl">과거 노후준비가 노년기의 활동성에 미치는 영향: 심리사회적 자원의 매개효과</div><div class="meta"><span class="me">신수민</span> · <i>사회복지연구</i>, 44(3), 57–83</div></div></li>
+      <li><span class="yr">2012</span><div><div class="ttl">노년기 자원봉사참여유형이 우울에 미치는 영향: 자아통합감의 매개효과를 중심으로</div><div class="meta">김동배, <span class="me">신수민</span>, 정규형 · <i>노인복지연구</i>, 57, 7–28</div></div></li>
+      <li><span class="yr">2012</span><div><div class="ttl">노년기 주거빈곤이 우울에 미치는 영향: 사회서비스의 매개효과</div><div class="meta">김동배, 유병선, <span class="me">신수민</span> · <i>한국노년학</i>, 32(4), 1041–1061</div></div></li>
+      <li><span class="yr">2012</span><div><div class="ttl">무배우자 노인의 사회참여가 우울에 미치는 영향: 사회적 지지와 자아효능감의 매개효과</div><div class="meta">김동배, 김상범, <span class="me">신수민</span> · <i>한국노년학</i>, 32(1), 289–303</div></div></li>
+    </ol>
+  </div>
+</div></section>
+
+<section class="block" id="presentations"><div class="wrap">
+  <p class="eyebrow">Presentations · 학술발표</p>
+  <h2>Conference Presentations</h2>
+  <div class="pubgroup">
+    <h3>International Conferences · 국제학술대회</h3>
+    <ol class="list">
+      <li><span class="yr">2024.06</span><div><div class="ttl">The Future of Giving in Korea: Using Donation Big Data and Explainable AI to Predict Donors</div><div class="meta"><span class="me">Soomin Shin</span> &amp; Kyungwon Kim · ARNOVA ASIA, Seoul, Korea</div></div></li>
+      <li><span class="yr">2023.07</span><div><div class="ttl">Possibility of Social Cooperative Growth in Child Care Social Service as Social Capital in the post-COVID-19 Era</div><div class="meta"><span class="me">Soomin Shin</span> &amp; Kyungwon Kim · CIRIEC, Seoul, Korea</div></div></li>
+      <li><span class="yr">2018.11</span><div><div class="ttl">Analysis of Suicidal Ideation of Seoul Citizen with Socioeconomic Deprivations: Focusing on the Social Support from the Perspective of Ecological System</div><div class="meta"><span class="me">Soomin Shin</span> &amp; Kyuhyoung Jeong · American Public Health Association Conference, San Diego, CA</div></div></li>
+      <li><span class="yr">2017.10</span><div><div class="ttl">Longitudinal Relationship between Housing Cost Burden and Depression in Older People: Focused on Difference in Preparing Later Life</div><div class="meta"><span class="me">Soomin Shin</span> &amp; Kyuhyoung Jeong · Borneo International Social Work Symposium, Kota Kinabalu, Malaysia</div></div></li>
+      <li><span class="yr">2016.11</span><div><div class="ttl">Factors Affecting Job Stress of Sexual Violence Support Workers in South Korea</div><div class="meta"><span class="me">Soomin Shin</span> &amp; InHan Song · American Public Health Association Conference, Denver, CO</div></div></li>
+      <li><span class="yr">2016.11</span><div><div class="ttl">A Delphi Analysis for the Development of Training Programs for Specialists Who Provide Services for the Treatment and Recovery of Victims of Sexual Violence in South Korea</div><div class="meta">InHan Song, <span class="me">Soomin Shin</span>, JiEun Kim, &amp; SangHyuk Lee · American Public Health Association Conference, Denver, CO</div></div></li>
+      <li><span class="yr">2015.11</span><div><div class="ttl">Effect of Academic Stress on Suicidal Ideation among Adolescents: Analysis of the Moderating Effect of Social Participation</div><div class="meta"><span class="me">Soomin Shin</span>, Hanki Lee, Sodam Jun, Hyewon Lee, &amp; InHan Song · American Public Health Association Conference, Chicago, IL</div></div></li>
+      <li><span class="yr">2015.11</span><div><div class="ttl">Effect of Adolescents' Violence Victimization Experience on Suicidal Thought: Analysis of the Mediating Effect of Alcohol Drinking</div><div class="meta">InHan Song, <span class="me">Soomin Shin</span> · American Public Health Association Conference, Chicago, IL</div></div></li>
+      <li><span class="yr">2015.11</span><div><div class="ttl">Professional Training Needs of Practitioners for the Victims of Sexual Violence</div><div class="meta">InHan Song, JiEun Kim, &amp; <span class="me">Soomin Shin</span> · American Public Health Association Conference, Chicago, IL</div></div></li>
+    </ol>
+  </div>
+  <div class="pubgroup">
+    <h3>Domestic Conferences · 국내학술대회</h3>
+    <ol class="list">
+      <li><span class="yr">2025.11</span><div><div class="ttl">대통령 언어로 읽는 국정 방향: 대통령의 발과 글 텍스트 분석</div><div class="meta"><span class="me">신수민</span> · 2025 사회정책연합공동학술대회</div></div></li>
+      <li><span class="yr">2025.11</span><div><div class="ttl">2020–2024 사회공헌 담론의 변화: 언론 보도 미디어 빅데이터 기반 텍스트 분석</div><div class="meta"><span class="me">신수민</span> · 2025 사회복지공동학술대회</div></div></li>
+      <li><span class="yr">2025.06</span><div><div class="ttl">기부자 행동 예측을 위한 인공지능 기반 분석: 공공데이터와 XAI 기반 예측 연구</div><div class="meta"><span class="me">신수민</span>, 김경원 · 한국경영과학회 춘계학술대회</div></div></li>
+      <li><span class="yr">2025.05</span><div><div class="ttl">인공지능은 치매에 대한 대중의 감정을 어떻게 읽는가: 치매관련 영화 댓글의 텍스트 마이닝</div><div class="meta"><span class="me">신수민</span>, 임보민 · 한국노인복지학회 춘계학술대회</div></div></li>
+      <li><span class="yr">2025.05</span><div><div class="ttl">초고령사회 한국의 노인을 향한 사회적 시선: 뉴스 빅데이터 기반 노인 혐오의 감성 분석</div><div class="meta"><span class="me">신수민</span>, 김경원 · 비판과 대안을 위한 사회복지학회 춘계학술대회</div></div></li>
+      <li><span class="yr">2025.05</span><div><div class="ttl">데이터로 기부의 마음을 읽다: 기부 빅데이터와 설명가능한 AI의 인사이트</div><div class="meta"><span class="me">신수민</span> · 한국사회복지정책학회 춘계학술대회</div></div></li>
+      <li><span class="yr">2025.05</span><div><div class="ttl">차이를 말하다, 공감을 듣다: 세대별 에이지즘 인식에 대한 텍스트 분석 연구</div><div class="meta"><span class="me">신수민</span>, 임보민 · 한국아동가족복지학회 춘계 공동연합학술대회</div><div class="meta"><span class="badge b-award">우수논문상</span></div></div></li>
+      <li><span class="yr">2024.05</span><div><div class="ttl">설명가능한 인공지능(XAI)를 활용한 남성 노인의 자살생각 예측</div><div class="meta"><span class="me">신수민</span> · 한국노인복지학회 춘계학술대회</div></div></li>
+      <li><span class="yr">2023</span><div><div class="ttl">머신러닝을 활용한 노인 자살생각 예측</div><div class="meta"><span class="me">신수민</span>, 김경원 · 한국노인복지학회 춘계학술대회</div></div></li>
+      <li><span class="yr">2016.05</span><div><div class="ttl">성폭력 피해자 지원시설 종사자의 직무스트레스에 영향을 미치는 요인</div><div class="meta"><span class="me">신수민</span> · 한국정신건강사회복지학회 학술발표논문집, 353–365</div></div></li>
+      <li><span class="yr">2016.05</span><div><div class="ttl">성폭력 피해자 맞춤형 치료 회복 지원을 위한 전문인력 양성 프로그램 개발 기초연구</div><div class="meta">이상혁, 송인한, 장숙랑, 강은영, <span class="me">신수민</span>, 김지은 · 한국정신건강사회복지학회 학술발표논문집, 293–308</div></div></li>
+    </ol>
+  </div>
+</div></section>
+
+<section class="block" id="projects"><div class="wrap">
+  <p class="eyebrow">Research Grants · 연구과제</p>
+  <h2>Research Projects</h2>
+  <ol class="list timeline">
+    <li><span class="yr">2024.02 – 2024.11</span><div><div class="ttl">기부 빅데이터와 설명가능한 인공지능을 활용한 개인 기부자 예측 연구</div><div class="meta">사랑의열매 사회복지공동모금회</div></div></li>
+    <li><span class="yr">2023.06 – 2026.05</span><div><div class="ttl">텍스트 마이닝과 데이터 마이닝 기반 치매에 대한 사회적 인식 및 태도 예측 모형 개발</div><div class="meta">한국연구재단 (NRF)</div></div></li>
+    <li><span class="yr">2023.04 – 2024.03</span><div><div class="ttl">노인차별(ageism) 문제의식 공감대 확산을 위한 한국 사회의 세대 간 갈등 트렌드 빅데이터 분석 및 텍스트 마이닝 분석</div><div class="meta">SK 티앤씨재단</div></div></li>
+    <li><span class="yr">2022.07 – 2022.11</span><div><div class="ttl">텍스트 데이터 마이닝을 통한 도시공원의 사회적가치와 지역사회복지 인프라 간 연계효과 분석</div><div class="meta">용산공원 연구공모 운영사무국, 서울특별시</div></div></li>
+    <li><span class="yr">2022.03 – 2022.12</span><div><div class="ttl">포스트코로나 사회적자본으로서 아동돌봄 사회서비스의 사회적 협동조합 성장 가능성</div><div class="meta">서울특별시사회적경제지원센터</div></div></li>
+    <li><span class="yr">2021.03 – 2021.12</span><div><div class="ttl">서울시 사회적기업 공공구매 역량강화를 위한 사례연구</div><div class="meta">서울특별시사회적경제지원센터</div></div></li>
+    <li><span class="yr">2021.03 – 2021.07</span><div><div class="ttl">신산업 3개분야 대표기업의 ESG Self-Concept에 대한 내러티브 고찰</div><div class="meta">사회적가치연구원</div></div></li>
+  </ol>
+</div></section>
+
+<section class="block" id="experience"><div class="wrap">
+  <p class="eyebrow">Experience</p>
+  <h2>경력</h2>
+  <ol class="list timeline">
+    <li><span class="yr">2024.09 – 현재</span><div><div class="ttl">국립한국교통대학교 사회복지학과 조교수</div><div class="sub">Assistant Professor, Department of Social Welfare, Korea National University of Transportation, Chungju</div></div></li>
+    <li><span class="yr">2020.04 – 2024.08</span><div><div class="ttl">유한대학교 보건복지학과 조교수</div><div class="sub">Assistant Professor, Department of Health and Social Welfare, Yuhan University, Bucheon</div><div class="sub">학생상담센터장, 장애학생지원센터장 역임 · 담당: 정신건강사회복지론, 의료사회복지론, CSR과 사회적경제, 사회복지정책론, 사회복지조사론, 공중보건</div></div></li>
+    <li><span class="yr">2018.08 – 2020.02</span><div><div class="ttl">삼성경제연구소 Research Associate &amp; Consultant</div><div class="sub">Department of Citizenship and CSR Research, Samsung Economic Research Institute (Samsung Global Research)</div><div class="sub">CSR 컨설팅·평가, CSR 전략 수립, ESG 평가 대응, 임직원 사회적 가치 교육, SDGs 연계 지속가능성 전략, 임직원 행복·정신건강 관리 프로그램 개발, 임직원 봉사 성과측정</div></div></li>
+    <li><span class="yr">2013.04 – 2014.02</span><div><div class="ttl">한국보건사회연구원 연구원</div><div class="sub">Researcher, Social Service Policy Lab, Korea Institute for Health and Social Affairs</div><div class="sub">국내외 사회복지정책 검토, 사회서비스 수요·공급 실태조사, 사회복지서비스 지역 GIS 분석, 지방자치단체 사회서비스 전달체계 개편을 위한 공무원 심층·초점집단 면접</div></div></li>
+  </ol>
+</div></section>
+
+<section class="block" id="education"><div class="wrap">
+  <p class="eyebrow">Education</p>
+  <h2>학력</h2>
+  <ol class="list timeline">
+    <li><span class="yr">2014.03 – 2020.02</span><div><div class="ttl">연세대학교 사회복지학 박사</div><div class="sub">Ph.D. in Social Welfare, Graduate School of Social Welfare, Yonsei University</div><div class="sub">지도교수 송인한 (정신건강·의료사회복지 연구실) · 전공 정신건강·의료사회복지, 산업복지</div><div class="sub">학위논문 <i>Multi-level Analysis of the Relationship Between Formal / Informal Resources and Suicidal Thoughts of the Elderly</i></div></div></li>
+    <li><span class="yr">2011.03 – 2013.02</span><div><div class="ttl">연세대학교 사회복지학 석사</div><div class="sub">Master of Social Welfare, Graduate School of Social Welfare, Yonsei University</div><div class="sub">지도교수 김동배 (노인복지 연구실) · 전공 노인복지, 비영리조직 경영 및 기부</div><div class="sub">학위논문 <i>The Effect of Preparation for Old Age on Active Aging of the Elderly: The Mediating Effect of Psychosocial Resources</i></div></div></li>
+    <li><span class="yr">2006.03 – 2011.02</span><div><div class="ttl">연세대학교 사회복지학·아동가족학 학사</div><div class="sub">B.A. in Social Welfare (College of Social Science) &amp; B.S. in Child and Family Studies (College of Human Ecology), Yonsei University</div></div></li>
+  </ol>
+</div></section>
+
+<section class="block" id="activities"><div class="wrap">
+  <p class="eyebrow">Service &amp; Activities</p>
+  <h2>대외활동</h2>
+  <div class="two-col">
+    <div>
+      <h3>자문 Expert Advice</h3>
+      <ol class="list timeline" style="margin-top:10px">
+        <li><span class="yr">2022.12 – 현재</span><div><div class="ttl">국내 기업 CSR 및 삼성 CSR 사업 트렌드 변화 자문</div><div class="meta">AlphaSights</div></div></li>
+        <li><span class="yr">2022.03 – 현재</span><div><div class="ttl">건강생활 실천교실 사업 교육 자문</div><div class="meta">유한양행 &amp; 의료비영리단체 프리메드</div></div></li>
+        <li><span class="yr">2020.04 – 2024.08</span><div><div class="ttl">CSR 파트너십 및 ESG 대응 자문</div><div class="meta">유한양행</div></div></li>
+      </ol>
+      <h3 style="margin-top:28px">위원회·사회공헌 Public Service</h3>
+      <ol class="list timeline" style="margin-top:10px">
+        <li><span class="yr">2023.07 – 2025.08</span><div><div class="ttl">부천시 청년정책위원회</div><div class="meta">경기도 부천시청</div></div></li>
+        <li><span class="yr">2022.07 – 2024.08</span><div><div class="ttl">청년정책위원</div><div class="meta">경기도 부천시청</div></div></li>
+        <li><span class="yr">2022.11 – 2022.12</span><div><div class="ttl">민선8기 공약 이행 점검 부천시 시민평가단</div><div class="meta">부천시청 &amp; 한국매니페스토실천본부</div></div></li>
+        <li><span class="yr">2014.08 – 2016.08</span><div><div class="ttl">경영지원팀장 (기업 펀드레이징, CSR 협력 제안)</div><div class="meta">의료비영리단체 프리메드</div></div></li>
+      </ol>
+    </div>
+    <div>
+      <h3>학회 활동 Membership</h3>
+      <ul class="plain" style="margin-top:10px">
+        <li>한국노인복지학회 · 한국노년학회</li>
+        <li>한국정신건강사회복지학회</li>
+        <li>한국사회복지행정학회 · 한국지역사회복지학회</li>
+        <li>비판과 대안을 위한 사회복지학회</li>
+        <li>한국아동가족복지학회 · 한국사회적기업학회</li>
+        <li>American Public Health Association</li>
+        <li>Gerontological Society of America</li>
+        <li>Society for Social Work and Research</li>
+        <li>ARNOVA</li>
+      </ul>
+      <h3 style="margin-top:24px">심사위원 Ad-hoc Reviewer</h3>
+      <ul class="plain" style="margin-top:10px">
+        <li>한국사회복지조사연구</li>
+        <li>사회적가치와 기업연구</li>
+        <li>미래사회복지연구</li>
+        <li>사회과학연구 (동국대학교 사회과학연구원)</li>
+        <li>한국자원봉사학회지</li>
+      </ul>
+      <h3 style="margin-top:24px">자격 Certificates</h3>
+      <ul class="plain" style="margin-top:10px">
+        <li>사회복지사 1급 (2012)</li>
+        <li>평생교육사 2급 (2011)</li>
+        <li>유치원 정교사 2급 (2011)</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 style="margin-top:40px">수상 Honors &amp; Awards</h3>
+  <ol class="list timeline" style="margin-top:10px">
+    <li><span class="yr">2025.05</span><div><div class="ttl">우수논문상, 한국아동가족복지학회 춘계 공동연합학술대회</div></div></li>
+    <li><span class="yr">2022</span><div><div class="ttl">유한대학교 강의평가 우수교원 · 우수학과 표창 · 유공포상 특별공로상</div></div></li>
+    <li><span class="yr">2021</span><div><div class="ttl">유한대학교 우수학과 표창 (학과평가 우수상) · 유공포상 특별공로상 3건</div></div></li>
+    <li><span class="yr">2017.06</span><div><div class="ttl">국민노후보장패널 학술논문 경진대회 우수상</div><div class="meta">국민연금공단</div></div></li>
+    <li><span class="yr">2015.12</span><div><div class="ttl">암예방 홍보전략 공모전 우수상</div><div class="meta">보건복지부 · 국립암센터</div></div></li>
+  </ol>
+</div></section>
+
+<section class="block" id="news"><div class="wrap">
+  <p class="eyebrow">In the News · 언론</p>
+  <h2>Media</h2>
+  <ol class="list timeline">
+    <li><span class="yr">2025.12.28</span><div><a class="ttl" href="https://www.tbc.co.kr/news/view?pno=20251222170227AE03892&amp;id=201991" target="_blank" rel="noopener">'AI'로 고독사·자살 예방...노인 문제 해법은 ↗</a><div class="meta">TBC뉴스</div></div></li>
+    <li><span class="yr">2025.02.26</span><div><a class="ttl" href="https://dhnews.co.kr/news/view/1065574400648035" target="_blank" rel="noopener">Social AI Analytics 예측 방법론 제시 ↗</a><div class="meta">e대학저널</div></div></li>
+    <li><span class="yr">2024.06.04</span><div><div class="ttl">유한대 사회서비스학과 사회복지전공 재학생 '한국노인복지학회 대학생 아이디어 공모전' 장려상 수상</div><div class="meta">베리타스 알파</div></div></li>
+    <li><span class="yr">2024.04.04</span><div><a class="ttl" href="https://www.kihoilbo.co.kr/news/articleView.html?idxno=1082048" target="_blank" rel="noopener">AI로 청소년 극단적 선택 예측 가능 ↗</a><div class="meta">기호일보</div></div></li>
+    <li><span class="yr">2021.12.21</span><div><a class="ttl" href="https://www.chosun.com/national/national_general/2021/12/21/GAMDBIFZMVCQHMS7WM4TC7ZY6E/" target="_blank" rel="noopener">사회적경제 성장 위해 시장 판로 넓히고 청년과 손 잡아야 ↗</a><div class="meta">조선일보</div></div></li>
+  </ol>
+</div></section>
+
+<section class="block" id="contact"><div class="wrap">
+  <p class="eyebrow">Contact · 연락처</p>
+  <h2>연구 협력과 문의를 환영합니다</h2>
+  <dl class="contact-grid">
+    <div class="card"><dt>Email</dt><dd>sshin@ut.ac.kr<br>sooming.shin@gmail.com</dd></div>
+    <div class="card"><dt>Office · 연구실</dt><dd>(27469) 충청북도 충주시 대소원면 대학로 50 국립한국교통대학교 화학생명관 219호<br><span class="sub">50 Daehak-ro, Chungju-si, Chungbuk, Korea</span></dd></div>
+    <div class="card"><dt>Tel</dt><dd>043-849-1762<br><span class="sub">+82-43-849-1762</span></dd></div>
+  </dl>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <span>© 2026 Soomin Shin · 신수민</span>
+  <span>Department of Social Welfare, Korea National University of Transportation</span>
+</div></footer>
+
+<script>
+(function(){
+  var btns=document.querySelectorAll('.tabs button');
+  var groups=document.querySelectorAll('#publications .pubgroup');
+  btns.forEach(function(b){
+    b.addEventListener('click',function(){
+      var f=b.getAttribute('data-f');
+      btns.forEach(function(x){x.setAttribute('aria-pressed',String(x===b));});
+      groups.forEach(function(g){g.hidden=!(f==='all'||g.getAttribute('data-g')===f);});
+    });
+  });
+})();
+</script>
+</body>
+</html>
